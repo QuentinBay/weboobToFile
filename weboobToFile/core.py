@@ -34,8 +34,9 @@ def process_boobank():
 
 def main():
 	configure_backends()
-	os.system("chmod 666 /root/.config/weboob/backends")
-	os.system("chmod 666 /root/.config/weboob/sources.list")
+	os.system("ls -l root/.config/weboob/")
+	os.system("chmod 600 /root/.config/weboob/backends")
+	os.system("chmod 600 /root/.config/weboob/sources.list")
 	boobank.weboob_update()
 
 	bank = dict()
