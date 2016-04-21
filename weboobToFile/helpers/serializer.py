@@ -2,6 +2,7 @@
 
 import json
 import time
+import os
 from pretty import get_pretty_json
 import webbrowser
 
@@ -19,5 +20,5 @@ def serialize(content):
 	filePath = "/root/src/weboobToFile/files/"+create_fileName()
 	print "Saving results to file : "+filePath
 	write_content(filePath, content)
-	#webbrowser.open("file://"+filePath)
+	os.system('cat %s' % (filePath))
 

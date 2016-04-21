@@ -9,7 +9,6 @@ from fileIO import read, write, append, parse_json
 from console import ask_bank, ask_done, ask_credentials
 import banks as bank
 
-
 # File containing paths
 configFile = "/root/src/weboobToFile/.config"
 

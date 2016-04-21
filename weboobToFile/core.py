@@ -46,4 +46,4 @@ def main():
 
 	erase_credentials()
 	serialize(bank)
-	os.system('cat %s' % (filename))
+	
