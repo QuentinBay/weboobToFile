@@ -6,6 +6,12 @@ from helpers.pretty import pretty_print
 from helpers.configure import configure_backends, erase_credentials
 from helpers.serializer import serialize
 import webbrowser
+import os
+
+
+
+filename = '/root/src/weboobToFile/files/test.json'
+
 
 def process_boobank():
 	bank = dict()
@@ -27,14 +33,14 @@ def process_boobank():
 	return bank
 
 def main():
-	# configure_backends()
-	# boobank.weboob_update()
+	configure_backends()
+	boobank.weboob_update()
 
-	# bank = dict()
-	# bank = process_boobank()
-	# if not bank:
-	# 	bank['Error'] = 'Fail to execute Boobank..'
+	bank = dict()
+	bank = process_boobank()
+	if not bank:
+		bank['Error'] = 'Fail to execute Boobank..'
 
-	# erase_credentials()
-	# serialize(bank)
-	webbrowser.open("file:///home/quentin/src/weboobToFile/files/test.json")
+	erase_credentials()
+	serialize(bank)
+	os.system('cat %s' % (filename))
