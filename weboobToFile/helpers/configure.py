@@ -11,10 +11,10 @@ import banks as bank
 
 
 # File containing paths
-configFile = "/home/quentin/src/weboobToFile/.config"
+configFile = "/root/src/weboobToFile/.config"
 
 def switch_to_local_update(sourceFile):
-	content = "file:///home/quentin/src/weboob/modules"
+	content = "file:///root/src/weboob/modules"
 	write(sourceFile, content)
 
 def get_user_config():
